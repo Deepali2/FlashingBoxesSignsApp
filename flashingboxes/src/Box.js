@@ -23,8 +23,7 @@ const Box = (props) => {
           fontFamily: fontFamily(Object.keys(fontFamilies).length)
         } 
         }>
-      <h2>Random Box</h2>
-      <p>One of us changes and all of us change font every 2 seconds.</p>
+      <p>Challenge your eyes and your memory! Detect which box changed color!</p>
     </div>
   ); 
 };

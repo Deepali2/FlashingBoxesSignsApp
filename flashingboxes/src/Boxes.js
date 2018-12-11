@@ -34,7 +34,7 @@ class Boxes extends Component {
       const randIndex = this.randomDigit(boxes.length);
       boxes[randIndex] = this.hexcolor(16);
       this.setState({boxes});
-    }, 2500);
+    }, 9000);
   } 
   
   randomDigit (maxNum) {
