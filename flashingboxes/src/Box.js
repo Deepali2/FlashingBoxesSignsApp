@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Box.css';
 
 const hexColors = {
@@ -52,7 +52,7 @@ const Box = (props) => {
   return(
     <div className="box" style={{backgroundColor: hexcolor(16), fontFamily: fontFamily(6)}}>
       <h1>Random Box</h1>
-      <p>Hit the browser refresh button to see what happens</p>
+      <p>One of us changes color every 300 millisecond. Also hit the browser refresh button to change all of our colors and fonts at once.</p>
     </div>
   ); 
 };

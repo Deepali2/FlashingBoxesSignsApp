@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import Box from './Box';
+import Boxes from './Boxes';
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
       <div className="App">
-        <Box />
+        <Boxes />
       </div>
     );
-  }
 }
 
 export default App;
