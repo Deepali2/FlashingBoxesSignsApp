@@ -57,8 +57,11 @@ class Boxes extends Component {
       <Box key={index} color={color} />
     ));
     return(
-      <div className='boxes'>
-        {boxes}
+      <div>
+         <div className='boxes'>
+           {boxes}
+         </div>
+         <h4>Designed and Maintained by deepaligarg1001@gmail.com</h4>
       </div>
     );
   }
