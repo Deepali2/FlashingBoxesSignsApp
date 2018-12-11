@@ -22,23 +22,11 @@ const hexColors = {
   "15": "F"
 };
 
-const fontFamilies = {
-  "0": "Helvetica, Arial, sans-serif",
-  "1": "Georgia, serif",
-  "2": "Verdana, sans-serif" ,
-  "3": "Garamond, serif",
-  "4": "Impact, serif",
-  "5": "Avant Garde, sans-serif",
-  "6": "Rockwell, serif"              
-};
-
 class Boxes extends Component {
   constructor(props) {
     super(props); 
     //boxes is an array of 32 color strings
     const boxes = Array(NUM_BOXES).fill().map(()=>this.hexcolor(16), this); //the second this is to make sure that this refers to the Boxes object
-    // const ffLength = fontFamilies.length;
-    // const fonts = Array(ffLength).fill().map(()=>this.fontFamily(ffLength), this);
     this.state = {boxes};
 
     setInterval(() => {
@@ -46,7 +34,7 @@ class Boxes extends Component {
       const randIndex = this.randomDigit(boxes.length);
       boxes[randIndex] = this.hexcolor(16);
       this.setState({boxes});
-    }, 300);
+    }, 100);
   } 
   
   randomDigit (maxNum) {
@@ -62,10 +50,7 @@ class Boxes extends Component {
     return string;
   };
 
-  fontFamily (maxNum) {
-    let digit = Math.floor(Math.random() * maxNum);
-    return fontFamilies[String(digit)];
-  };
+
 
   render() {
     const boxes = this.state.boxes.map((color, index) => (
