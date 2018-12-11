@@ -36,15 +36,15 @@ class Boxes extends Component {
   constructor(props) {
     super(props); 
     //boxes is an array of 32 color strings
-    const boxes = Array(NUM_BOXES).fill().map(this.hexcolor, this); //the second this is to make sure that this refers to the Boxes object
-    const ffLength = fontFamilies.length;
+    const boxes = Array(NUM_BOXES).fill().map(()=>this.hexcolor(16), this); //the second this is to make sure that this refers to the Boxes object
+    // const ffLength = fontFamilies.length;
     // const fonts = Array(ffLength).fill().map(()=>this.fontFamily(ffLength), this);
     this.state = {boxes};
 
     setInterval(() => {
       const boxes = this.state.boxes.slice();
       const randIndex = this.randomDigit(boxes.length);
-      boxes[randIndex] = this.hexcolor(17);
+      boxes[randIndex] = this.hexcolor(16);
       this.setState({boxes});
     }, 300);
   } 
